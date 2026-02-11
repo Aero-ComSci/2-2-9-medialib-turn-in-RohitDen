@@ -8,7 +8,7 @@ public class Book
   private String title;
   private String author;
   private int rating;
-  
+ 
   /*** Constructor ****/
   public Book(String t, String a)
   {
@@ -16,7 +16,7 @@ public class Book
     author = a;
     rating = 0;
   }
-  
+ 
    /*** Accessor methods ***/
   public String getTitle() {
     return title;
@@ -25,16 +25,16 @@ public class Book
   public String getAuthor() {
     return author;
   }
-  
+ 
   public int getRating() {
     return rating;
   }
-  
-  public String toString() 
+ 
+  public String toString()
   {
     String info = "\"" + title + "\", written by " + author;
-    if (rating != 0) 
-    { 
+    if (rating != 0)
+    {
       info += ", rating is " + rating;
     }
     return info;
@@ -61,3 +61,4 @@ public class Book
     return false;
   }
 }
+
