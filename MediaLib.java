@@ -5,52 +5,59 @@
  */
 public class MediaLib
 {
+  public static String owner = "Rohit";
+  private static int numEntries;
+  private static int numBooks;
+  private static int numMovies;
+  private static int numSongs;
+
   private Book book;
   private Movie movie;
   private Song song;
 
   public void addBook(Book b)
   {
-    book = b;
+    if (book == null)
+    {
+      book = b;
+      numEntries++;
+      numBooks++;
+    } 
+    else
+      System.out.println("You cannot add a new book: A book already exists");
   }
-
+  
   public void addMovie(Movie m)
   {
-    movie = m;
+    if (movie == null)
+    {
+      movie = m;
+      numEntries++;
+      numMovies++;
+    }
+    else
+      System.out.println("You cannot add a new movie: A movie already exists");
   }
-
-  public void addSong(Song s){
-    song = s;
+  
+  public void addSong(Song s)
+  {
+    if (song == null)
+    {
+      song = s;
+      numEntries++;
+      numSongs++;
+    }
+    else
+      System.out.println("You cannot add a new song: A song already exists");
   }
 
   public String toString() 
   {
-    //modify to show the attributes
-
-    String info = "This book has been added: " + book;
-    info += "\nThis movie has been added: " + movie;
-    info += "\nThis song has been added: " + song;
+    String info = "";
     
-    return info;
-  }
-
-  public Book getBook()
-  {
-  return book;
-  }
-
-  public void testBook(Book tester){
-    tester.setTitle("A New Title");
-    System.out.println("The new title of the book is: " + tester.getTitle());
-  }
-
-  public static String getOwner()
-  {
-    return "Baez";
-  }
-
-  public static int getNumberOfItems()
-  {
-    return 3;
-  }
-}
+    if (book != null)
+      info += "Book: " + book + "\n";
+    if (movie != null)
+      info += "Movie: " + movie + "\n";
+    if (song != null)
+      info += "Song: " + song + "\n";
