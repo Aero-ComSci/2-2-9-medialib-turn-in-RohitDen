@@ -2,7 +2,7 @@ public class Movie {
   private String title;
   private int duration;
   private int rating;
-  
+ 
   /*** Constructor ****/
   public Movie(String t, int d)
   {
@@ -10,7 +10,7 @@ public class Movie {
     duration = d;
     rating = 0;
   }
-  
+ 
    /*** Accessor methods ***/
   public String getTitle() {
     return title;
@@ -19,16 +19,16 @@ public class Movie {
   public int getDuration() {
     return duration;
   }
-  
+ 
   public int getRating() {
     return rating;
   }
-  
-  public String toString() 
+ 
+  public String toString()
   {
     String info = "\"" + title + "\", duration is " + duration;
-    if (rating != 0) 
-    { 
+    if (rating != 0)
+    {
       info += ", rating is " + rating;
     }
     return info;
@@ -55,3 +55,4 @@ public class Movie {
     return false;
   }
 }
+
